@@ -1200,7 +1200,8 @@ footer .signature {
     /* Hero Section */
     .hero {
         min-height: 85vh;
-        padding: 1.5rem 1.25rem;
+        padding: 5rem 1.25rem 1.5rem 1.25rem;
+        padding-top: 100px;
     }
     
     .hero-content {
@@ -1597,7 +1598,8 @@ footer .signature {
     /* Hero */
     .hero {
         min-height: 80vh;
-        padding: 1.25rem 1rem;
+        padding: 5rem 1rem 1.25rem 1rem;
+        padding-top: 90px;
     }
     
     .tag {
