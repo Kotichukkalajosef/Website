@@ -368,6 +368,13 @@ section {
     padding: 5rem 2rem;
     max-width: 1200px;
     margin: 0 auto;
+    overflow-x: hidden;
+    box-sizing: border-box;
+}
+
+#about {
+    overflow-x: hidden;
+    max-width: 100%;
 }
 
 h2 {
@@ -396,6 +403,8 @@ h2::after {
 /* About Section */
 .about-container {
     margin-top: 3rem;
+    max-width: 100%;
+    overflow-x: hidden;
 }
 
 .about-content {
@@ -403,6 +412,8 @@ h2::after {
     grid-template-columns: 1fr 1fr;
     gap: 3rem;
     align-items: start;
+    max-width: 100%;
+    overflow-x: hidden;
 }
 
 .about-text p {
@@ -468,6 +479,8 @@ h2::after {
 .about-image {
     position: sticky;
     top: 100px;
+    max-width: 100%;
+    overflow: hidden;
 }
 
 .code-window {
@@ -476,6 +489,8 @@ h2::after {
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 0 30px rgba(0, 255, 140, 0.2);
+    max-width: 100%;
+    box-sizing: border-box;
 }
 
 .code-header {
@@ -502,10 +517,15 @@ h2::after {
 .code-content {
     padding: 1.5rem;
     overflow-x: auto;
+    max-width: 100%;
+    box-sizing: border-box;
 }
 
 .code-content pre {
     margin: 0;
+    max-width: 100%;
+    overflow-x: auto;
+    white-space: pre;
 }
 
 .code-content code {
@@ -513,6 +533,8 @@ h2::after {
     font-size: 0.9rem;
     line-height: 1.6;
     color: #fff;
+    display: block;
+    max-width: 100%;
 }
 
 .code-keyword {
@@ -1264,8 +1286,8 @@ footer .signature {
     }
     
     .code-content {
-        font-size: 0.75rem;
-        padding: 1rem;
+        font-size: 0.65rem;
+        padding: 0.8rem;
         text-align: left;
         width: 100%;
         max-width: 100%;
@@ -1276,13 +1298,18 @@ footer .signature {
     .code-content pre {
         overflow-x: auto;
         max-width: 100%;
-        white-space: pre-wrap;
-        word-wrap: break-word;
+        white-space: pre;
+        font-size: 0.65rem;
     }
     
     .code-content code {
-        font-size: 0.7rem;
-        word-break: break-word;
+        font-size: 0.65rem;
+        display: block;
+        white-space: pre;
+    }
+    
+    .code-string {
+        word-break: break-all;
     }
     
     .skills-grid {
@@ -1525,30 +1552,42 @@ footer .signature {
     }
     
     .code-content {
-        font-size: 0.6rem;
+        font-size: 0.5rem;
         text-align: left;
-        padding: 0.8rem;
+        padding: 0.5rem;
         overflow-x: auto;
+        width: 100%;
     }
     
     .code-content pre {
-        white-space: pre-wrap;
-        word-wrap: break-word;
+        white-space: pre;
         overflow-x: auto;
+        font-size: 0.5rem;
+        margin: 0;
     }
     
     .code-content code {
-        font-size: 0.55rem;
+        font-size: 0.5rem;
+        white-space: pre;
     }
     
     .about-container {
         width: 100%;
         overflow-x: hidden;
+        padding: 0;
+        margin: 0 auto;
     }
     
     .code-window {
         width: 100%;
         max-width: 100%;
+        margin: 0;
+    }
+    
+    .about-image {
+        width: 100%;
+        padding: 0;
+        margin: 0;
     }
     
     .timeline-item:nth-child(odd),
