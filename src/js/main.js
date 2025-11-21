@@ -154,24 +154,33 @@ document.addEventListener('DOMContentLoaded', () => {
                     thankYouMessage.style.display = 'block';
                     
                     // Scroll to thank you message
-                    thankYouMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    setTimeout(() => {
+                        thankYouMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    }, 100);
                     
                     // Reset form
                     contactForm.reset();
                     
-                    // Optional: Hide thank you message and show form again after 10 seconds
+                    // Optional: Hide thank you message and show form again after 15 seconds
                     setTimeout(() => {
                         thankYouMessage.style.display = 'none';
                         contactForm.style.display = 'block';
                         submitBtn.textContent = originalText;
                         submitBtn.disabled = false;
-                    }, 10000);
+                    }, 15000);
                 } else {
-                    throw new Error('Form submission failed');
+                    const data = await response.json();
+                    if (data.errors) {
+                        alert(data.errors.map(error => error.message).join(', '));
+                    } else {
+                        throw new Error('Form submission failed');
+                    }
+                    submitBtn.textContent = originalText;
+                    submitBtn.disabled = false;
                 }
             } catch (error) {
                 console.error('Error:', error);
-                alert('Oops! There was a problem submitting your form. Please try again.');
+                alert('Oops! There was a problem submitting your form. Please try again or email directly.');
                 submitBtn.textContent = originalText;
                 submitBtn.disabled = false;
             }
