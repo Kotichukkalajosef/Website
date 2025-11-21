@@ -1236,6 +1236,8 @@ footer .signature {
         flex-direction: column;
         gap: 1rem;
         width: 100%;
+        align-items: center;
+        justify-content: center;
     }
     
     .btn {
@@ -1243,6 +1245,7 @@ footer .signature {
         max-width: 300px;
         padding: 0.9rem 1.5rem;
         font-size: 0.9rem;
+        text-align: center;
     }
     
     .cta-sign {
