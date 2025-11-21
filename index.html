@@ -1,0 +1,583 @@
+<!--
+    File: index.html
+    Purpose: Cybersecurity portfolio main page
+    Signed by: Josef Kotichukkala
+    Date: 2025-11-21
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Josef Kotichukkala | Cybersecurity Portfolio</title>
+    <meta name="description" content="Cybersecurity student portfolio with terminal-inspired design">
+    <meta name="author" content="Josef Kotichukkala">
+    <link rel="stylesheet" href="src/css/main.css">
+    <link rel="stylesheet" href="src/css/animations.css">
+</head>
+<body>
+    <!-- Terminal Boot Screen - signed: Josef Kotichukkala -->
+    <div id="bootScreen" class="boot-screen">
+        <div class="boot-content">
+            <div class="boot-header">
+                <pre class="ascii-art">
+  ____ _   _ ____  _____ ____  ____  _____ ____ _   _ ____  ___ _______   __
+ / ___\ \ / | __ )| ____|  _ \/ ___|| ____/ ___| | | |  _ \|_ _|_   _\ \ / /
+| |    \ V /|  _ \|  _| | |_) \___ \|  _|| |   | | | | |_) || |  | |  \ V / 
+| |___  | | | |_) | |___|  _ < ___) | |__| |___| |_| |  _ < | |  | |   | |  
+ \____| |_| |____/|_____|_| \_\____/|_____\____|\___/|_| \_\___| |_|   |_|  
+                </pre>
+            </div>
+            <div class="boot-terminal">
+                <p><span class="boot-prompt">[SYSTEM]</span> <span class="boot-text">Initializing security protocols...</span></p>
+                <p><span class="boot-prompt">[BOOT]</span> <span class="boot-text">Loading security modules</span> <span class="boot-dots"></span></p>
+                <p><span class="boot-prompt">[INIT]</span> <span class="boot-text">Mounting encrypted file systems</span> <span class="boot-status boot-ok">[OK]</span></p>
+                <p><span class="boot-prompt">[LOAD]</span> <span class="boot-text">Starting firewall services</span> <span class="boot-status boot-ok">[OK]</span></p>
+                <p><span class="boot-prompt">[EXEC]</span> <span class="boot-text">Loading security_portfolio.sh</span> <span class="boot-dots"></span></p>
+                <p><span class="boot-prompt">[INIT]</span> <span class="boot-text">Initializing secure interface</span> <span class="boot-status boot-ok">[OK]</span></p>
+                <p><span class="boot-prompt">[DONE]</span> <span class="boot-text">System secured and ready</span> <span class="boot-status boot-ready">[READY]</span></p>
+            </div>
+            <div class="boot-progress">
+                <div class="boot-progress-bar"></div>
+            </div>
+            <p class="boot-footer">Press any key to continue... <span class="boot-sign">— Josef Kotichukkala</span></p>
+        </div>
+    </div>
+
+    <nav>
+        <div class="nav-content">
+            <div class="logo">&gt;_cybersecurity.sh <span class="logo-sign">· Josef Kotichukkala</span></div>
+            <div class="hamburger" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="nav-links" id="navLinks">
+                <a href="#about" onclick="closeMenu()">About</a>
+                <a href="#skills" onclick="closeMenu()">Skills</a>
+                <a href="#experience" onclick="closeMenu()">Experience</a>
+                <a href="#education" onclick="closeMenu()">Education</a>
+                <a href="#certifications" onclick="closeMenu()">Certifications</a>
+                <a href="#projects" onclick="closeMenu()">Projects</a>
+                <a href="#blog" onclick="closeMenu()">Blog</a>
+                <a href="#contact" onclick="closeMenu()">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-content fade-in">
+            <div class="tag">// Cybersecurity Student & Ethical Hacker</div>
+            <h1>JOSEF KOTICHUKKALA</h1>
+            <p class="subtitle">Securing digital infrastructure — protecting the future</p>
+            
+            <div class="terminal-window">
+                <div class="terminal-header">
+                    <div class="terminal-dot dot-red"></div>
+                    <div class="terminal-dot dot-yellow"></div>
+                    <div class="terminal-dot dot-green"></div>
+                </div>
+                <div class="terminal-text">
+                    <p><span class="prompt">$</span> <span class="command">./get_profile.sh</span></p>
+                    <p class="output">Cybersecurity Student with expertise in:</p>
+                    <p class="output"><span class="prompt">&gt;</span> Penetration Testing</p>
+                    <p class="output"><span class="prompt">&gt;</span> Network Security</p>
+                    <p class="output"><span class="prompt">&gt;</span> Vulnerability Assessment</p>
+                    <br>
+                    <p><span class="prompt">$</span> <span class="command">cat contact.txt</span></p>
+                    <p class="output">GitHub: <a href="https://github.com/josefkotichukkala" target="_blank" class="link">github.com/josefkotichukkala</a></p>
+                    <br>
+                    <p><span class="prompt">$</span> <span class="output">_</span><span style="animation: blink 1s infinite;">|</span></p>
+                </div>
+            </div>
+
+            <div class="cta-buttons">
+                <a href="#projects" class="btn btn-primary">View Projects</a>
+                <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+                <!-- Quick sign -->
+                <span class="cta-sign">signed: Josef Kotichukkala</span>
+            </div>
+        </div>
+    </section>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <div class="about-container">
+            <div class="about-content fade-in">
+                <div class="about-text">
+                    <p class="about-intro">
+                        Hi! I'm <span class="highlight">Josef Kotichukkala</span>, a passionate cybersecurity student 
+                        dedicated to protecting digital infrastructure and securing the future. <span class="about-sign">— Josef Kotichukkala</span>
+                    </p>
+                    <p>
+                        With a strong foundation in network security, ethical hacking, and vulnerability assessment, I specialize in 
+                        identifying security threats and implementing robust defense mechanisms. My work is driven by a passion for 
+                        cybersecurity best practices, threat intelligence, and staying ahead of emerging cyber threats.
+                    </p>
+                    <div class="about-stats">
+                        <div class="stat-item">
+                            <div class="stat-number">3+</div>
+                            <div class="stat-label">Years of Study</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">25+</div>
+                            <div class="stat-label">Security Projects</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">∞</div>
+                            <div class="stat-label">Vulnerabilities Found</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <div class="code-window">
+                        <div class="code-header">
+                            <div class="code-dot dot-red"></div>
+                            <div class="code-dot dot-yellow"></div>
+                            <div class="code-dot dot-green"></div>
+                            <span class="code-title">profile.js</span>
+                        </div>
+                        <div class="code-content">
+<pre><code><span class="code-keyword">const</span> <span class="code-variable">securityExpert</span> = {
+  <span class="code-property">name</span>: <span class="code-string">"Josef Kotichukkala"</span>,
+  <span class="code-property">role</span>: <span class="code-string">"Cybersecurity Student"</span>,
+  <span class="code-property">location</span>: <span class="code-string">"Your Location"</span>,
+  <span class="code-property">interests</span>: [
+    <span class="code-string">"Penetration Testing"</span>,
+    <span class="code-string">"Network Security"</span>,
+    <span class="code-string">"Ethical Hacking"</span>,
+    <span class="code-string">"Digital Forensics"</span>
+  ],
+  <span class="code-property">currentlyLearning</span>: [
+    <span class="code-string">"Advanced Exploitation"</span>,
+    <span class="code-string">"Malware Analysis"</span>
+  ],
+  <span class="code-property">funFact</span>: <span class="code-string">"I find vulnerabilities before attackers do"</span>
+};</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills">
+        <h2>Skills</h2>
+        <div class="skills-grid">
+            <div class="skill-category fade-in">
+                <h3>Penetration Testing</h3>
+                <div class="skill-item">
+                    <div class="skill-name">
+                        <span>Web App Testing</span>
+                        <span>85%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 0%" data-width="85%"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-name">
+                        <span>Network Pentesting</span>
+                        <span>80%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 0%" data-width="80%"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-name">
+                        <span>Exploit Development</span>
+                        <span>75%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 0%" data-width="75%"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="skill-category fade-in" style="animation-delay: 0.1s;">
+                <h3>Security Tools</h3>
+                <div class="skill-item">
+                    <div class="skill-name">
+                        <span>Kali Linux</span>
+                        <span>90%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 0%" data-width="90%"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-name">
+                        <span>Metasploit</span>
+                        <span>80%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 0%" data-width="80%"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-name">
+                        <span>Burp Suite</span>
+                        <span>85%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 0%" data-width="85%"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="skill-category fade-in" style="animation-delay: 0.2s;">
+                <h3>Programming & Scripting</h3>
+                <div class="skill-item">
+                    <div class="skill-name">
+                        <span>Python</span>
+                        <span>85%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 0%" data-width="85%"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-name">
+                        <span>Bash Scripting</span>
+                        <span>80%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 0%" data-width="80%"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-name">
+                        <span>C/C++</span>
+                        <span>70%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 0%" data-width="70%"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience">
+        <h2>Experience</h2>
+        <div class="timeline">
+            <div class="timeline-item fade-in">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <h3>Security Research Intern</h3>
+                    <div class="timeline-date">2024 - Present</div>
+                    <p class="timeline-description">
+                        Conducting vulnerability assessments and penetration testing on web applications and network infrastructure. 
+                        Identifying security flaws and providing detailed remediation recommendations to enhance security posture.
+                    </p>
+                </div>
+            </div>
+
+            <div class="timeline-item fade-in" style="animation-delay: 0.1s;">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <h3>CTF Competitor</h3>
+                    <div class="timeline-date">2023 - Present</div>
+                    <p class="timeline-description">
+                        Active participant in Capture The Flag competitions, solving challenges in web exploitation, cryptography, 
+                        reverse engineering, and binary exploitation. Consistently ranking in top teams.
+                    </p>
+                </div>
+            </div>
+
+            <div class="timeline-item fade-in" style="animation-delay: 0.2s;">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <h3>Bug Bounty Hunter</h3>
+                    <div class="timeline-date">2023 - Present</div>
+                    <p class="timeline-description">
+                        Discovering and reporting security vulnerabilities through bug bounty programs.
+                        Focused on web application security, API testing, and authentication bypass techniques.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="education">
+        <h2>Education</h2>
+        <div class="timeline">
+            <div class="timeline-item fade-in">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <h3>Bachelor's in Cybersecurity</h3>
+                    <div class="timeline-date">2022 - Present</div>
+                    <p class="timeline-description">
+                        Studying cybersecurity principles, network security, ethical hacking, and digital forensics.
+                        Specialized in penetration testing, malware analysis, and incident response. Maintaining excellent academic standing.
+                    </p>
+                </div>
+            </div>
+
+            <div class="timeline-item fade-in" style="animation-delay: 0.1s;">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <h3>Self-Learning & Security Labs</h3>
+                    <div class="timeline-date">2021 - Present</div>
+                    <p class="timeline-description">
+                        Continuously learning through platforms like HackTheBox, TryHackMe, and PortSwigger Academy.
+                        Completed advanced courses in penetration testing, web application security, and exploit development.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="certifications">
+        <h2>Certifications & Awards</h2>
+        <div class="certifications-grid">
+            <div class="cert-card fade-in">
+                <div class="cert-icon">🔐</div>
+                <div class="cert-badge">
+                    <div class="cert-badge-inner">
+                        <div class="cert-title">Penetration Testing</div>
+                        <div class="cert-issuer">EC-Council</div>
+                    </div>
+                </div>
+                <h3>Certified Ethical Hacker (CEH)</h3>
+                <p class="cert-description">
+                    Comprehensive certification covering penetration testing methodologies, vulnerability assessment, and ethical hacking techniques.
+                </p>
+                <div class="cert-footer">
+                    <span class="cert-date">2024</span>
+                    <a href="#" class="cert-link">Verify &rarr;</a>
+                </div>
+            </div>
+
+            <div class="cert-card fade-in" style="animation-delay: 0.1s;">
+                <div class="cert-icon">🛡️</div>
+                <div class="cert-badge">
+                    <div class="cert-badge-inner">
+                        <div class="cert-title">Security+</div>
+                        <div class="cert-issuer">CompTIA</div>
+                    </div>
+                </div>
+                <h3>CompTIA Security+</h3>
+                <p class="cert-description">
+                    Industry-standard certification validating baseline cybersecurity skills including threat management and risk mitigation.
+                </p>
+                <div class="cert-footer">
+                    <span class="cert-date">2024</span>
+                    <a href="#" class="cert-link">Verify &rarr;</a>
+                </div>
+            </div>
+
+            <div class="cert-card fade-in" style="animation-delay: 0.2s;">
+                <div class="cert-icon">🌐</div>
+                <div class="cert-badge">
+                    <div class="cert-badge-inner">
+                        <div class="cert-title">Web Security</div>
+                        <div class="cert-issuer">PortSwigger</div>
+                    </div>
+                </div>
+                <h3>Burp Suite Certified Practitioner</h3>
+                <p class="cert-description">
+                    Advanced web application security testing certification demonstrating expertise in identifying and exploiting vulnerabilities.
+                </p>
+                <div class="cert-footer">
+                    <span class="cert-date">2024</span>
+                    <a href="#" class="cert-link">Verify &rarr;</a>
+                </div>
+            </div>
+
+            <div class="cert-card fade-in" style="animation-delay: 0.3s;">
+                <div class="cert-icon">💻</div>
+                <div class="cert-badge">
+                    <div class="cert-badge-inner">
+                        <div class="cert-title">Offensive Security</div>
+                        <div class="cert-issuer">Offensive Security</div>
+                    </div>
+                </div>
+                <h3>OSCP (In Progress)</h3>
+                <p class="cert-description">
+                    Currently pursuing the industry-leading Offensive Security Certified Professional certification through hands-on penetration testing.
+                </p>
+                <div class="cert-footer">
+                    <span class="cert-date">2025</span>
+                    <span class="cert-badge-text">In Progress</span>
+                </div>
+            </div>
+
+            <div class="cert-card fade-in" style="animation-delay: 0.4s;">
+                <div class="cert-icon">🔍</div>
+                <div class="cert-badge">
+                    <div class="cert-badge-inner">
+                        <div class="cert-title">Digital Forensics</div>
+                        <div class="cert-issuer">SANS Institute</div>
+                    </div>
+                </div>
+                <h3>GIAC Forensics Analyst</h3>
+                <p class="cert-description">
+                    Certification in digital forensics and incident response, covering evidence collection and malware analysis techniques.
+                </p>
+                <div class="cert-footer">
+                    <span class="cert-date">2023</span>
+                    <a href="#" class="cert-link">Verify &rarr;</a>
+                </div>
+            </div>
+
+            <div class="cert-card fade-in" style="animation-delay: 0.5s;">
+                <div class="cert-icon">⭐</div>
+                <div class="cert-badge award-badge">
+                    <div class="cert-badge-inner">
+                        <div class="cert-title">Award</div>
+                        <div class="cert-issuer">CTF Competition 2024</div>
+                    </div>
+                </div>
+                <h3>Top 10 CTF Finalist</h3>
+                <p class="cert-description">
+                    Placed in top 10 at National Cybersecurity CTF Competition, demonstrating advanced skills in exploitation and problem-solving.
+                </p>
+                <div class="cert-footer">
+                    <span class="cert-date">2024</span>
+                    <span class="cert-badge-text">🥇 Top 10</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2>Featured Projects</h2>
+        <div class="projects-grid">
+            <div class="project-card fade-in">
+                <h3>� Vulnerability Scanner</h3>
+                <p>Automated web application vulnerability scanner built with Python, detecting common security flaws like SQL injection and XSS.</p>
+                <a href="#" class="project-link">View More &rarr;</a>
+            </div>
+            
+            <div class="project-card fade-in" style="animation-delay: 0.1s;">
+                <h3>🛡️ Network Security Tool</h3>
+                <p>Custom network monitoring and intrusion detection system for identifying suspicious traffic patterns and potential threats.</p>
+                <a href="#" class="project-link">Explore &rarr;</a>
+            </div>
+            
+            <div class="project-card fade-in" style="animation-delay: 0.2s;">
+                <h3>🔍 Malware Analysis Lab</h3>
+                <p>Isolated virtual environment for analyzing malicious software behavior and developing detection signatures.</p>
+                <a href="#contact" class="project-link">Learn More &rarr;</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="blog">
+        <h2>Latest Blog Posts</h2>
+        <div class="blog-grid">
+            <div class="blog-card fade-in">
+                <div class="blog-header">
+                    <div class="blog-date">November 15, 2025</div>
+                </div>
+                <div class="blog-body">
+                    <h3>Advanced Web Application Penetration Testing</h3>
+                    <div class="blog-tags">
+                        <span class="blog-tag">Pentesting</span>
+                        <span class="blog-tag">Web Security</span>
+                        <span class="blog-tag">OWASP</span>
+                    </div>
+                    <p>Exploring advanced techniques for identifying and exploiting web application vulnerabilities including authentication bypass and business logic flaws...</p>
+                    <a href="#" class="project-link">Read More &rarr;</a>
+                </div>
+            </div>
+
+            <div class="blog-card fade-in" style="animation-delay: 0.1s;">
+                <div class="blog-header">
+                    <div class="blog-date">November 10, 2025</div>
+                </div>
+                <div class="blog-body">
+                    <h3>Understanding Modern Malware Techniques</h3>
+                    <div class="blog-tags">
+                        <span class="blog-tag">Malware</span>
+                        <span class="blog-tag">Analysis</span>
+                        <span class="blog-tag">Reverse Engineering</span>
+                    </div>
+                    <p>A deep dive into contemporary malware obfuscation techniques, anti-analysis methods, and how to effectively analyze suspicious binaries...</p>
+                    <a href="#" class="project-link">Read More &rarr;</a>
+                </div>
+            </div>
+
+            <div class="blog-card fade-in" style="animation-delay: 0.2s;">
+                <div class="blog-header">
+                    <div class="blog-date">November 5, 2025</div>
+                </div>
+                <div class="blog-body">
+                    <h3>Network Security Best Practices</h3>
+                    <div class="blog-tags">
+                        <span class="blog-tag">Network Security</span>
+                        <span class="blog-tag">Firewall</span>
+                        <span class="blog-tag">IDS/IPS</span>
+                    </div>
+                    <p>Learn how to implement robust network security controls, configure firewalls effectively, and detect intrusions before they cause damage...</p>
+                    <a href="#" class="project-link">Read More &rarr;</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Get In Touch</h2>
+        <div class="contact-container">
+            <div class="contact-grid">
+                <div class="contact-item fade-in">
+                    <div class="contact-icon">📧</div>
+                    <h3>Email</h3>
+                    <a href="mailto:josef.kotichukkala@example.com">josef.kotichukkala@example.com</a>
+                    <div class="contact-note">preferred contact: <strong>Josef Kotichukkala</strong></div>
+                </div>
+
+                <div class="contact-item fade-in" style="animation-delay: 0.1s;">
+                    <div class="contact-icon">💼</div>
+                    <h3>GitHub</h3>
+                    <a href="https://github.com/josefkotichukkala" target="_blank">github.com/josefkotichukkala</a>
+                </div>
+
+                <div class="contact-item fade-in" style="animation-delay: 0.2s;">
+                    <div class="contact-icon">🔗</div>
+                    <h3>LinkedIn</h3>
+                    <a href="https://linkedin.com/in/josefkotichukkala" target="_blank">linkedin.com/in/josefkotichukkala</a>
+                </div>
+
+                <div class="contact-item fade-in" style="animation-delay: 0.3s;">
+                    <div class="contact-icon">🐦</div>
+                    <h3>Twitter</h3>
+                    <a href="https://twitter.com/josefkotichukkala" target="_blank">@josefkotichukkala</a>
+                </div>
+            </div>
+
+            <div class="contact-form fade-in">
+                <form>
+                    <div class="form-group">
+                        <label>$ name --input</label>
+                        <input type="text" placeholder="Your Name" required>
+                        <small class="field-sign">Signed by Josef Kotichukkala</small>
+                    </div>
+                    <div class="form-group">
+                        <label>$ email --input</label>
+                        <input type="email" placeholder="your.email@example.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label>$ message --input</label>
+                        <textarea placeholder="Your message here..." required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+    <p>&copy; 2025 <span class="signature">Josef Kotichukkala</span>. All rights reserved.</p>
+        <p style="margin-top: 0.5rem; font-size: 0.9rem;">Made with ❤️ using HTML, CSS & JavaScript</p>
+        <p style="margin-top: 0.25rem; font-size: 0.8rem; color: #bbb;">Site signed and maintained by <strong>Josef Kotichukkala</strong></p>
+    </footer>
+
+
+    <script src="src/js/main.js"></script>
+</body>
+</html>
+
+<!-- End of file - signed: Josef Kotichukkala -->
