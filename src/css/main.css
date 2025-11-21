@@ -171,6 +171,13 @@ body {
     background: #121212;
     color: #fff;
     overflow-x: hidden;
+    max-width: 100vw;
+    width: 100%;
+}
+
+html {
+    overflow-x: hidden;
+    max-width: 100vw;
 }
 
 body::before {
@@ -1040,8 +1047,15 @@ footer .signature {
 /* Easter egg styles removed */
 
 @media (max-width: 768px) {
+    body {
+        overflow-x: hidden;
+        max-width: 100vw;
+    }
+    
     * {
         text-align: center;
+        max-width: 100%;
+        box-sizing: border-box;
     }
     
     h1 { 
@@ -1063,10 +1077,14 @@ footer .signature {
     section {
         padding: 3rem 1.5rem;
         text-align: center;
+        width: 100%;
+        max-width: 100vw;
+        overflow-x: hidden;
     }
     
     p {
         text-align: center;
+        word-wrap: break-word;
     }
     
     .boot-content {
@@ -1183,47 +1201,88 @@ footer .signature {
         text-align: center;
     }
     
+    .about-container {
+        width: 100%;
+        overflow-x: hidden;
+    }
+    
     .about-content {
         grid-template-columns: 1fr;
         gap: 2rem;
         text-align: center;
+        width: 100%;
+        max-width: 100%;
     }
     
     .about-text {
         text-align: center;
+        width: 100%;
+        max-width: 100%;
     }
     
     .about-text p {
         text-align: center;
+        width: 100%;
+        word-wrap: break-word;
     }
     
     .about-image {
         position: static;
         order: -1;
+        width: 100%;
+        max-width: 100%;
+        overflow: hidden;
     }
     
     .about-stats {
         grid-template-columns: 1fr;
         gap: 1rem;
+        width: 100%;
     }
     
     .stat-item {
         padding: 1rem;
         text-align: center;
+        width: 100%;
+        box-sizing: border-box;
     }
     
     .stat-number {
         font-size: 2rem;
     }
     
+    .code-window {
+        width: 100%;
+        max-width: 100%;
+        overflow: hidden;
+        box-sizing: border-box;
+    }
+    
+    .code-header {
+        width: 100%;
+        box-sizing: border-box;
+    }
+    
     .code-content {
         font-size: 0.75rem;
         padding: 1rem;
         text-align: left;
+        width: 100%;
+        max-width: 100%;
+        overflow-x: auto;
+        box-sizing: border-box;
     }
     
     .code-content pre {
         overflow-x: auto;
+        max-width: 100%;
+        white-space: pre-wrap;
+        word-wrap: break-word;
+    }
+    
+    .code-content code {
+        font-size: 0.7rem;
+        word-break: break-word;
     }
     
     .skills-grid {
@@ -1399,13 +1458,21 @@ footer .signature {
 }
 
 @media (max-width: 480px) {
+    body {
+        overflow-x: hidden;
+        max-width: 100vw;
+    }
+    
     * {
         text-align: center;
+        max-width: 100%;
+        box-sizing: border-box;
     }
     
     h1 { 
         font-size: 1.8rem;
         text-align: center;
+        word-break: break-word;
     }
     
     h2 { 
@@ -1423,11 +1490,15 @@ footer .signature {
     
     nav {
         padding: 0.8rem 1rem;
+        width: 100%;
     }
     
     section {
         padding: 2rem 1rem;
         text-align: center;
+        width: 100%;
+        max-width: 100vw;
+        overflow-x: hidden;
     }
     
     .terminal-window {
@@ -1454,8 +1525,30 @@ footer .signature {
     }
     
     .code-content {
-        font-size: 0.65rem;
+        font-size: 0.6rem;
         text-align: left;
+        padding: 0.8rem;
+        overflow-x: auto;
+    }
+    
+    .code-content pre {
+        white-space: pre-wrap;
+        word-wrap: break-word;
+        overflow-x: auto;
+    }
+    
+    .code-content code {
+        font-size: 0.55rem;
+    }
+    
+    .about-container {
+        width: 100%;
+        overflow-x: hidden;
+    }
+    
+    .code-window {
+        width: 100%;
+        max-width: 100%;
     }
     
     .timeline-item:nth-child(odd),
