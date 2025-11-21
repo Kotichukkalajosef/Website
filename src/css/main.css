@@ -370,11 +370,14 @@ section {
     margin: 0 auto;
     overflow-x: hidden;
     box-sizing: border-box;
+    width: 100%;
 }
 
 #about {
     overflow-x: hidden;
-    max-width: 100%;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
 }
 
 h2 {
@@ -1097,11 +1100,18 @@ footer .signature {
     }
     
     section {
-        padding: 3rem 1.5rem;
+        padding: 3rem 1rem;
         text-align: center;
         width: 100%;
         max-width: 100vw;
         overflow-x: hidden;
+        margin: 0 auto;
+    }
+    
+    #about {
+        padding: 3rem 1rem;
+        width: 100%;
+        max-width: 100vw;
     }
     
     p {
@@ -1226,26 +1236,38 @@ footer .signature {
     .about-container {
         width: 100%;
         overflow-x: hidden;
+        padding: 0;
+        margin: 0;
     }
     
     .about-content {
         grid-template-columns: 1fr;
-        gap: 2rem;
+        gap: 1.5rem;
         text-align: center;
         width: 100%;
         max-width: 100%;
+        padding: 0;
+        margin: 0;
     }
     
     .about-text {
         text-align: center;
         width: 100%;
         max-width: 100%;
+        padding: 0;
     }
     
     .about-text p {
         text-align: center;
         width: 100%;
         word-wrap: break-word;
+        padding: 0 0.5rem;
+        margin-bottom: 1rem;
+    }
+    
+    .about-intro {
+        font-size: 1rem;
+        padding: 0 0.5rem;
     }
     
     .about-image {
@@ -1254,12 +1276,16 @@ footer .signature {
         width: 100%;
         max-width: 100%;
         overflow: hidden;
+        padding: 0;
+        margin: 0;
     }
     
     .about-stats {
         grid-template-columns: 1fr;
         gap: 1rem;
         width: 100%;
+        padding: 0;
+        margin-top: 1.5rem;
     }
     
     .stat-item {
@@ -1267,10 +1293,11 @@ footer .signature {
         text-align: center;
         width: 100%;
         box-sizing: border-box;
+        margin: 0;
     }
     
     .stat-number {
-        font-size: 2rem;
+        font-size: 1.8rem;
     }
     
     .code-window {
@@ -1278,11 +1305,13 @@ footer .signature {
         max-width: 100%;
         overflow: hidden;
         box-sizing: border-box;
+        margin: 0;
     }
     
     .code-header {
         width: 100%;
         box-sizing: border-box;
+        padding: 0.6rem 0.8rem;
     }
     
     .code-content {
@@ -1521,11 +1550,16 @@ footer .signature {
     }
     
     section {
-        padding: 2rem 1rem;
+        padding: 2rem 0.8rem;
         text-align: center;
         width: 100%;
         max-width: 100vw;
         overflow-x: hidden;
+        margin: 0 auto;
+    }
+    
+    #about {
+        padding: 2rem 0.8rem;
     }
     
     .terminal-window {
@@ -1575,7 +1609,25 @@ footer .signature {
         width: 100%;
         overflow-x: hidden;
         padding: 0;
-        margin: 0 auto;
+        margin: 0;
+    }
+    
+    .about-content {
+        padding: 0;
+        margin: 0;
+    }
+    
+    .about-text {
+        padding: 0;
+    }
+    
+    .about-text p {
+        padding: 0 0.5rem;
+        font-size: 0.9rem;
+    }
+    
+    .about-intro {
+        font-size: 0.95rem;
     }
     
     .code-window {
@@ -1588,6 +1640,14 @@ footer .signature {
         width: 100%;
         padding: 0;
         margin: 0;
+    }
+    
+    .stat-number {
+        font-size: 1.5rem;
+    }
+    
+    .stat-label {
+        font-size: 0.8rem;
     }
     
     .timeline-item:nth-child(odd),
