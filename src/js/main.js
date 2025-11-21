@@ -122,4 +122,61 @@ window.addEventListener('scroll', () => {
     }, 150);
 }, { passive: true });
 
-// End of file - signed: serozr
+// Contact Form Submission Handler
+document.addEventListener('DOMContentLoaded', () => {
+    const contactForm = document.getElementById('contactForm');
+    const thankYouMessage = document.getElementById('thankYouMessage');
+    
+    if (contactForm) {
+        contactForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            
+            const formData = new FormData(contactForm);
+            const submitBtn = contactForm.querySelector('.submit-btn');
+            const originalText = submitBtn.textContent;
+            
+            // Show loading state
+            submitBtn.textContent = '$ sending...';
+            submitBtn.disabled = true;
+            
+            try {
+                const response = await fetch(contactForm.action, {
+                    method: 'POST',
+                    body: formData,
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                });
+                
+                if (response.ok) {
+                    // Hide form and show thank you message
+                    contactForm.style.display = 'none';
+                    thankYouMessage.style.display = 'block';
+                    
+                    // Scroll to thank you message
+                    thankYouMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    
+                    // Reset form
+                    contactForm.reset();
+                    
+                    // Optional: Hide thank you message and show form again after 10 seconds
+                    setTimeout(() => {
+                        thankYouMessage.style.display = 'none';
+                        contactForm.style.display = 'block';
+                        submitBtn.textContent = originalText;
+                        submitBtn.disabled = false;
+                    }, 10000);
+                } else {
+                    throw new Error('Form submission failed');
+                }
+            } catch (error) {
+                console.error('Error:', error);
+                alert('Oops! There was a problem submitting your form. Please try again.');
+                submitBtn.textContent = originalText;
+                submitBtn.disabled = false;
+            }
+        });
+    }
+});
+
+// End of file - signed: Josef Kotichukkala
